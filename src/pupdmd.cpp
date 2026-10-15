@@ -353,7 +353,7 @@ void DMD::CalculateHashIndexed(const uint8_t* pFrame, Hash* pHash)
   }
   else
   {
-    pHash->indexedHash = komihash(pFrame, 128 * 32, 0);
+    pHash->indexedHash = komihash(pFrame, (uint16_t)pHash->width * pHash->height, 0);
   }
 }
 
